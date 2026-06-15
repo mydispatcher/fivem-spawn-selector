@@ -1,0 +1,2 @@
+# fivem-spawn-selector
+hey
