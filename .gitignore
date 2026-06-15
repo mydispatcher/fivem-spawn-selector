@@ -1,0 +1,17 @@
+# Local files
+.DS_Store
+*.log
+node_modules/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+*.tmp
+
+# Config overrides
+config.local.lua

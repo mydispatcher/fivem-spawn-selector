@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM Spawn Selector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="spawn-container" class="spawn-container hidden">
+        <!-- Left Panel - Spawn List -->
+        <div class="spawn-panel left-panel">
+            <div class="panel-header">
+                <h2>SELECT LOCATION</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="spawn-search">
+                <input type="text" id="search-input" placeholder="Search spawns..." class="search-box">
+                <div class="search-icon">🔍</div>
+            </div>
+            
+            <div class="spawn-list" id="spawn-list">
+                <!-- Spawns will be injected here -->
+            </div>
+        </div>
+        
+        <!-- Right Panel - Details & Actions -->
+        <div class="spawn-panel right-panel">
+            <div class="panel-header">
+                <h2>SPAWN DETAILS</h2>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="spawn-info" id="spawn-info">
+                <div class="info-content">
+                    <h3 id="info-title">No Location Selected</h3>
+                    <p id="info-desc">Choose a spawn location from the list to view details</p>
+                    
+                    <div class="info-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Category:</span>
+                            <span class="stat-value" id="info-category">-</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Job Required:</span>
+                            <span class="stat-value" id="info-job">None</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="spawn-btn" class="spawn-btn" disabled>
+                    <span class="btn-text">SELECT A LOCATION</span>
+                    <span class="btn-glow"></span>
+                </button>
+            </div>
+            
+            <div class="close-section">
+                <button id="close-btn" class="close-btn">CLOSE</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>SPAWNING...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Background -->
+    <div id="bg-overlay" class="bg-overlay hidden"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
